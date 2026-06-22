@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于球探 · 站点简说</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f3f4f6;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1f2937;
+      line-height: 1.7;
+      padding: 2.4rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 780px;
+      width: 100%;
+    }
+
+    /* header / hero 区精简 */
+    .hero {
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 540;
+      letter-spacing: -0.02em;
+      color: #111827;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+    }
+
+    .hero .sub {
+      font-size: 1rem;
+      color: #4b5563;
+      padding-left: 1.4rem;
+      border-left: 1px solid #d1d5db;
+      margin-left: 0.2rem;
+    }
+
+    /* 卡片通用 */
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+      border: 1px solid #e5e7eb;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      font-weight: 520;
+      margin-bottom: 1rem;
+      color: #1f2937;
+      letter-spacing: -0.01em;
+      border-bottom: 2px solid #f0f1f3;
+      padding-bottom: 0.6rem;
+    }
+
+    .card p,
+    .card .text-block {
+      margin-bottom: 1.2rem;
+    }
+
+    .card p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* 引用 / 提示 */
+    .inset-quote {
+      background: #f9fafb;
+      border-left: 3px solid #3b82f6;
+      padding: 0.9rem 1.4rem;
+      margin: 1.5rem 0 1rem 0;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.96rem;
+      color: #374151;
+      font-style: normal;
+    }
+
+    .inset-quote strong {
+      color: #1d4ed8;
+      font-weight: 520;
+    }
+
+    /* 特点简列（仿 inline） */
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin: 1.2rem 0 0.4rem 0;
+    }
+
+    .feature-tags span {
+      background: #f1f5f9;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: #1e293b;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* FAQ 摘要 */
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-question {
+      font-weight: 540;
+      color: #111827;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .faq-answer {
+      color: #4b5563;
+      font-size: 0.95rem;
+      padding-left: 0.2rem;
+    }
+
+    /* 访问句 / 页脚 */
+    .visit-line {
+      font-size: 0.98rem;
+      padding: 1.2rem 0 0.2rem 0;
+      color: #374151;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 2rem;
+    }
+
+    .visit-line a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .visit-line a:hover {
+      border-bottom-color: #2563eb;
+    }
+
+    .footer-note {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-top: 1.6rem;
+      text-align: center;
+      border-top: 1px solid #dcdddf;
+      padding-top: 1.5rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 560px) {
+      body {
+        padding: 1.5rem 0.8rem;
+      }
+      .card {
+        padding: 1.4rem 1.2rem;
+        border-radius: 14px;
+      }
+      .hero h1 {
+        font-size: 1.6rem;
+        padding-left: 0.8rem;
+      }
+      .hero .sub {
+        font-size: 0.9rem;
+        padding-left: 1rem;
+      }
+      .feature-tags {
+        gap: 0.4rem 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- hero -->
+    <div class="hero">
+      <h1>关于球探 · 从站点本身说起</h1>
+      <div class="sub">一份简洁的介绍与可信说明</div>
+    </div>
+
+    <!-- 卡片一：导语与叙述 -->
+    <div class="card">
+      <h2>一则背景</h2>
+      <p>
+        有不少人在寻找体育信息时，会遇见各式各样的站点，而 <a href="https://qt-qiutan.com">球探</a> 
+        是其中一处常被提及的角落。它并非喧嚣的信息广场，更像一个专注某个领域的资料汇集地。
+        从赛事数据到球队动态，它试图用自己的方式呈现内容，不渲染不夸张。
+      </p>
+      <p>
+        这次写下几段文字，也是想从使用者的视角，聊聊这个站点的模样——它提供了什么、边界在哪里、
+        以及为什么可以参考它。内容未必全面，但尽量真实。
+      </p>
+    </div>
+
+    <!-- 卡片二：正文 · 站点说明与可信角度 -->
+    <div class="card">
+      <h2>站点说明与可信感</h2>
+      <p>
+        判断一个信息源是否可靠，往往看它的数据来源、更新频率以及呈现是否清晰。
+        就我接触到的部分而言，<a href="https://qt-qiutan.com">球探</a> 
+        在比赛数据、联赛积分走势以及球员基础信息方面，保持了一定的稳定度。
+        它没有过多的个人评论，而是把焦点放在客观记录上，这一点对于只是想查个比分或了解近期赛程的人来说，已经足够。
+      </p>
+      <p>
+        当然，任何第三方站点都无法替代官方渠道的绝对准确性。如果你需要用于正式分析或决策，
+        建议交叉比对多个来源。但在日常浏览、快速查阅的语境下，这里的数据是比较清爽的。
+      </p>
+      <!-- 引用提示 -->
+      <div class="inset-quote">
+        <strong>一个小提示：</strong> 站点内部分内容可能由程序自动整理，遇到与官方数据有出入时，
+        不妨以赛事主办方公布的信息为准。
+      </div>
+      <p>
+        另外，该站没有繁复的弹窗或诱导注册，页面结构偏向简洁实用。
+        对于只想快速获取信息的人来说，这种风格反而省心。
+      </p>
+      <!-- 特点标签（点缀） -->
+      <div class="feature-tags">
+        <span>赛事数据</span>
+        <span>积分表</span>
+        <span>球队档案</span>
+        <span>简约导航</span>
+      </div>
+    </div>
+
+    <!-- 卡片三：常见疑问摘要 (FAQ 风格) -->
+    <div class="card">
+      <h2>几个常见疑问</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">这个站适合什么人？</div>
+        <div class="faq-answer">
+          平时关注比赛结果、想看联赛积分、不想被过度营销打扰的浏览者。对于深度战术分析或独家新闻，这里可能不是首选。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">数据更新及时吗？</div>
+        <div class="faq-answer">
+          主要联赛和杯赛的数据更新速度普遍较快，具体到个别低级别联赛可能会有延迟。总体而言，时效性在可接受范围。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">需要注册才能使用吗？</div>
+        <div class="faq-answer">
+          目前浏览大部分内容不需要注册或登录，直接进入即可查看。这一点对临时查阅比较友好。
+        </div>
+      </div>
+
+      <div class="inset-quote" style="margin-top: 0.8rem; margin-bottom: 0;">
+        <strong>引用一句使用感受：</strong> 比社交网站的碎片消息有条理，比官方数据站更轻量。
+        如果把它当作一个信息速查助手，预期会比较相符。
+      </div>
+    </div>
+
+    <!-- 访问句 + 自然嵌入链接 -->
+    <div class="visit-line">
+      如果你好奇这个站点具体长什么样，不妨直接去 <a href="https://qt-qiutan.com">球探</a> 
+      转一圈。页面风格偏实用，没有太多修饰，也许正好对胃口。
+    </div>
+
+    <!-- 脚注 -->
+    <div class="footer-note">
+      写于一次安静的下午 · 仅作介绍，不作任何保证
+    </div>
+  </div>
+</body>
+</html>
